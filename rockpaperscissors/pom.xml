@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <jdk.source.version>1.6</jdk.source.version>
+        <jdk.target.version>1.6</jdk.target.version>
+        <jdk.home>${env.JAVA_HOME}</jdk.home>
+        <compiler.executable>${jdk.home}\bin\javac</compiler.executable>
+        <maven.test.skip>true</maven.test.skip>
+    </properties>
+
+    <groupId>game</groupId>
+    <artifactId>rockpaperscissors</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>Rock-Paper-Scissors</name>
+
+    <build>
+        <defaultGoal>package</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!--<configuration>
+                    <argLine>-Dsun.lang.ClassLoader.allowArraySyntax=true</argLine>
+                    <systemProperties>
+                      <property>
+                        <name>root.dir</name>
+                        <value>${project.build.directory}/test-classes</value>
+                      </property>
+                    </systemProperties>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </configuration>-->
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.1</version>
+        </dependency>
+    </dependencies>
+</project>
