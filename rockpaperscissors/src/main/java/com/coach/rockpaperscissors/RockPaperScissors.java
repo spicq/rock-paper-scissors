@@ -10,7 +10,7 @@ public class RockPaperScissors {
         Reader reader = new Reader();
         int numGame = 1;
         while (true) {   // game loop
-            System.out.println("=============== Game n°" + numGame++);
+            System.out.println("=============== Game #" + numGame++);
             int numRounds = reader.readInt("Please enter the number of rounds between 0(quit) and 10: ", 0, 10);
             if (numRounds == 0) {
                 break;
